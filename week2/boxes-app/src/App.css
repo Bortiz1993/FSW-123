@@ -1,0 +1,17 @@
+.MainProps {
+  margin: 50px;
+  border: 1px solid black;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  
+  
+
+}
+
+.mainBox{
+  display: inline-flex;
+  margin-left: 150px;
+}
