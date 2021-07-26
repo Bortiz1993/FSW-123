@@ -1,6 +1,5 @@
 
 import RollDie from './RollDie';
-import './App.css';
 
 
 function App (){

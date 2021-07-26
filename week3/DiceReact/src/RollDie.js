@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import Die from './Die'
+import './RollDice.css'
+
 function RollDie () {
     const [dieNum, setDie] = useState(0);
     const [dieNum2, setDie2] = useState(0);
@@ -21,32 +23,29 @@ function RollDie () {
         console.log(random2)
 
        setDie2(random2)
-       
 
-       
+       setTimeout(() => {
+        setRoll(false)
+       },1000)  
     }
     
-   
-
     return (
-        <div>
-    
-
+        <div className='RollDice'>
+        <div className='RollDice-container'>
+        
     <Die
     num = {dieNum}
     /> 
 
     <Die
-    num = {dieNum2}
+    num2 = {dieNum2}
     /> 
-
+        </div>
   
-    <button onClick={randomGen} >Hello</button>
+    <button className="RollDice-Button" onClick={randomGen} >Roll Dice</button>
         </div>
 
     );
 }
-
-
 
 export default RollDie;
