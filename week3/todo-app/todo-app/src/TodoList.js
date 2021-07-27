@@ -1,13 +1,15 @@
 //do the map
-import todo from './todo';
 
-function TodoList({todos, props}){
-    const todoList = todos.map((Todo, index) => <div key = {index}>{Todo}</div>);
+import Todo from './todo';
 
+function TodoList( props){
+    console.log(props)
+    const todoList = props.todos.map((todo, index) => <Todo completeTodo ={props.completeTodo} deleteTodo ={props.deleteTodo} key = {index}  todo = {todo}/>)
 
 return (
     <div>
-    <label>Todos <input type="text" value={todoList}></input></label>
+   
+     {todoList} 
     
     
     </div>

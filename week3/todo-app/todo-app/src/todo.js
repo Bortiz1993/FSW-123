@@ -1,10 +1,32 @@
 //event handlers
 //pass the two  functions as props addtodos and deletetodos
 
-function todo ({todo}) {
-    return <div>
-        {todo._id} {todo.text}
-    </div>
+function Todo ({todo, completeTodo, deleteTodo}) {
+    // console.log(todo._id)
+    console.log(deleteTodo)
+    const id = todo._id
+    return (<div>
+     <label>Todos
+      <input 
+      type="checkbox"
+       checked={todo.isCompleted}
+        id={id}
+         onChange={(e)=> {
+             completeTodo(e.target.id) 
+              }} 
+         value={""}
+         ></input>
+         </label>
+
+         {todo.text}
+         
+        <button
+         id="delete"
+          onClick={ (e) => deleteTodo(id)}
+          >
+          X
+          </button>
+    </div>)
 }
 
-export default todo;
+export default Todo;

@@ -10,7 +10,7 @@ function App() {
   const [newTodo, setNewTodo] = useState("");
  
   const handleChange = (event) => {
-    event.preventDefault
+    event.preventDefault()
     setTodos(event.target.value)
     setNewTodo(event.target.value)
   }
@@ -18,8 +18,10 @@ function App() {
   const completeTodo = id => {
     const copyTodos = [...todos];
     var foundTodo = copyTodos.map(todo => {
+      console.log(todo._id)
        if ( todo._id === id){
          todo.isCompleted = (todo.isCompleted? false:true)
+         return todo
        }
        else {
          return (
@@ -29,6 +31,7 @@ function App() {
         
        
      })
+     console.log(foundTodo)
     setTodos(foundTodo);
   }
 
@@ -47,6 +50,10 @@ function App() {
   return (
     <div>
   <TodoList todos = {todos} completeTodo = {completeTodo} deleteTodo = {deleteTodo}/>
+  <form>
+    
+  </form>
+
       
     </div>
   );
