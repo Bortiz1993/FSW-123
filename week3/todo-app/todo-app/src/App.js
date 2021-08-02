@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import './App.css';
-import {listoftodos} from './STORE'
+import {listOfToDos} from './STORE'
 import TodoList from './TodoList';
-import Todo from './todo'
 
 function App() {
 
-  const  [todos, setTodos] = useState(listoftodos);
+  const  [todos, setTodos] = useState(listOfToDos);
   const [newTodo, setNewTodo] = useState("");
  
   const handleChange = (event) => {
@@ -45,14 +44,21 @@ function App() {
     setTodos(foundTodo);
   }
 
+  const addTodo = text => {
+    const copyTodos = [...todos];
+    return (<ul> {copyTodos.map((item) => (
+  <li key={item.id}>{item.text}</li>
+    ))}
+  </ul>
+    );
+  };
+
 
 
   return (
     <div>
   <TodoList todos = {todos} completeTodo = {completeTodo} deleteTodo = {deleteTodo}/>
-  <form>
-    
-  </form>
+  
 
       
     </div>

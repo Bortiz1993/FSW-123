@@ -1,10 +1,10 @@
 import {v4 as uuidv4} from "uuid";
 
-export const listoftodos = [
+export const listOfToDos = [
     {
         _id: uuidv4(),
         text: "goto gym",
-        isCompleted: true
+        isCompleted: false
     },
     {
         _id: uuidv4(),
