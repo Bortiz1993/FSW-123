@@ -1,0 +1,28 @@
+*{
+    font-size: 30px;
+    
+}
+
+.container {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color:#1fffe9
+}
+.link-colors {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+   background-color: deeppink;
+   padding: 10px;
+   gap: 10px;
+
+}
+
+.switch-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items:baseline;
+}
