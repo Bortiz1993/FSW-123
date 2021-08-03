@@ -7,13 +7,14 @@ import TodoForm from './TodoForm';
 function App() {
 
   const  [todos, setTodos] = useState(listOfToDos);
-  const [newTodo, setNewTodo] = useState("");
+  const [newTodo, setNewTodo] = useState([]);
  
-  const handleChange = (event) => {
-    event.preventDefault()
-    setTodos(event.target.value)
-    setNewTodo(event.target.value)
-  }
+  
+ // const handleChange = (event) => {
+   // event.preventDefault()
+   // setTodos(event.target.value)
+   // setNewTodo(event.target.value)
+  //}
 
   const completeTodo = id => {
     const copyTodos = [...todos];
@@ -45,13 +46,11 @@ function App() {
     setTodos(foundTodo);
   }
 
+  //addTodo finish this function
   const addTodo = text => {
-    const copyTodos = [...todos];
-    return (<ul> {copyTodos.map((item) => (
-  <li key={item.id}>{item.text}</li>
-    ))}
-  </ul>
-    );
+    const copyTodos = [...newTodo, {text}];
+    setNewTodo(copyTodos);
+    
   };
 
 
@@ -59,7 +58,7 @@ function App() {
   return (
     <div>
   <TodoList todos = {todos} completeTodo = {completeTodo} deleteTodo = {deleteTodo}/>
-  <TodoForm todos = {todos} addTodo = {addTodo}/>
+  <TodoForm  addTodo = {addTodo}/>
   
 
       
