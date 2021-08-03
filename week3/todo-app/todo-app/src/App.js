@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import {listOfToDos} from './STORE'
 import TodoList from './TodoList';
+import TodoForm from './TodoForm';
 
 function App() {
 
@@ -58,6 +59,7 @@ function App() {
   return (
     <div>
   <TodoList todos = {todos} completeTodo = {completeTodo} deleteTodo = {deleteTodo}/>
+  <TodoForm todos = {todos} addTodo = {addTodo}/>
   
 
       
