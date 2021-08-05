@@ -48,9 +48,8 @@ function App() {
 
   //addTodo finish this function
   const addTodo = text => {
-    const copyTodos = [...newTodo, {text}];
-    setNewTodo(copyTodos);
-    
+    const copyTodo = [...newTodo, {text}];
+    setNewTodo(copyTodo) 
   };
 
 

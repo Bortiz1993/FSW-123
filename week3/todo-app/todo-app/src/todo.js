@@ -6,7 +6,7 @@ function Todo ({todo, completeTodo, deleteTodo}) {
     console.log(deleteTodo)
     const id = todo._id
     return (<div>
-     <label>Todos
+     <label>
       <input 
       type="checkbox"
        checked={todo.isCompleted}
