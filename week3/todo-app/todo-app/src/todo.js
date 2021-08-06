@@ -3,7 +3,6 @@
 
 function Todo ({todo, completeTodo, deleteTodo}) {
     // console.log(todo._id)
-    console.log(deleteTodo)
     const id = todo._id
     return (<div>
      <label>

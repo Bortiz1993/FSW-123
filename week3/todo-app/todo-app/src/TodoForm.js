@@ -1,25 +1,26 @@
-import { useState } from 'react';
-//define the function handleChange here//
-function TodoForm ({addTodo}) {
-    const [value, setValue] = useState([]);
+//import { useState } from 'react';
+// //define the function handleChange here//
+// function TodoForm ({addTodo}) {
+//     const [value, setValue] = useState([]);
 
-     const handleSubmit = (e) => {
-       e.preventDefault();
-       if (!value) return;
-       addTodo(value);
-       setValue("");
-  };
-  console.log(value)
-  console.log({addTodo})
-
-  
+//      const handleSubmit = (e) => {
+//        e.preventDefault();
+//        if (!value) return;
+//        addTodo(value);
+//        setValue("");
+//   };
+//   console.log(value)
+//   console.log({addTodo})
+function TodoForm ({addTodo, handleChange, newTodo}) {
+    
+console.log()
     return (
         <>
-        <form onSubmit ={handleSubmit} name="todo-form" method="POST">
-        <input type="text" value={value} onChange={e => setValue(e.target.value)}></input>
+        <form onSubmit={addTodo}  name="todo-form" method="POST">
+        <input name="text" type="text" value={newTodo.text} onChange={handleChange} required></input>
         <button type="Submit">add Todo</button>
         </form>
-        {value && <ul><li>Name:</li></ul>}
+        {/* {te && <ul><li>Name:</li></ul>} */}
         </>
     )
     
