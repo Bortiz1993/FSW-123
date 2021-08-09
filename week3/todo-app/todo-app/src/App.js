@@ -7,7 +7,7 @@ import {v4 as uuidv4} from "uuid";
 
 
 function App() {
-
+//edit handler function
   const  [todos, setTodos] = useState(listOfToDos);
   const [newTodo, setNewTodo] = useState({});
  
@@ -61,7 +61,10 @@ function App() {
 }];
     setTodos(copyTodo) 
   };
-
+  
+  //const editTodo = id  => {
+    
+  //}
 
 
   return (
