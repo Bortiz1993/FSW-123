@@ -11,14 +11,22 @@
 //   };
 //   console.log(value)
 //   console.log({addTodo})
-function TodoForm ({addTodo, handleChange, newTodo}) {
+function TodoForm ({addTodo, handleChange, buttonText, newTodo}) {
     
 console.log()
     return (
         <>
         <form onSubmit={addTodo}  name="todo-form" method="POST">
         <input name="text" type="text" value={newTodo.text} onChange={handleChange} required></input>
-        <button type="Submit">add Todo</button>
+        {/* <button type="Submit">{buttonText}</button> */}
+
+        {newTodo.text?
+           <button >{buttonText}</button>
+           :
+           <button disabled>{buttonText}</button>
+            
+            } 
+        
         </form>
         {/* {te && <ul><li>Name:</li></ul>} */}
         </>

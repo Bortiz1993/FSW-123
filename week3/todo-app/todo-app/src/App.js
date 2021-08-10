@@ -61,16 +61,25 @@ function App() {
 }];
     setTodos(copyTodo) 
   };
-  
-  //const editTodo = id  => {
-    
-  //}
 
+  //editTodo function here.
+  
+  const editTodo = (id, updateTodo) => {
+    console.log(id, updateTodo)
+    const copyTodo = [...todos].map((todo) => {
+      //console.log(todo.id)
+      if (todo._id === id) {
+        todo.text = updateTodo.text
+      }
+      return todo;
+    })
+    setTodos(copyTodo)
+  };
 
   return (
     <div>
-     <TodoForm newTodo = {newTodo} handleChange= {handleChange} addTodo = {addTodo}/>
-  <TodoList todos = {todos} completeTodo = {completeTodo} deleteTodo = {deleteTodo}/>
+     <TodoForm newTodo = {newTodo} handleChange= {handleChange} buttonText={"AddTodo"} addTodo = {addTodo}/>
+  <TodoList todos = {todos} completeTodo = {completeTodo} deleteTodo = {deleteTodo} editTodo={editTodo}/>
  
   
 

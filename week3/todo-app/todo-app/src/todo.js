@@ -5,8 +5,8 @@ import  TodoForm from './TodoForm';
 //pass the two  functions as props addtodos and deletetodos
 ///There is going to be state in the todo edit button here?
 
-function Todo ({todo, completeTodo, deleteTodo}) {
-    // console.log(todo._id)
+function Todo ({todo, completeTodo, deleteTodo, editTodo}) {
+    console.log(todo._id)
     const [editing, setEditing] = useState(false);
 
         const editToggler = () => {
@@ -24,6 +24,13 @@ function Todo ({todo, completeTodo, deleteTodo}) {
       
     }
 
+    const editHandler = (e) => {
+      e.preventDefault()
+      console.log(todo._id, updates)
+      editTodo(todo._id, updates)
+      setEditing(false)
+    }
+
 
     const id = todo._id
     return (<div>
@@ -37,6 +44,11 @@ function Todo ({todo, completeTodo, deleteTodo}) {
               }} 
          value={""}
          ></input>
+         {/* {todo.isCompleted?
+        todo.isCompleted.style.textDecoration = "line-through"
+          :
+          todo.isCompleted.style.textDecoration = "none"
+         } */}
          </label>
 
          {todo.text}
@@ -48,15 +60,22 @@ function Todo ({todo, completeTodo, deleteTodo}) {
           X
           </button>
 
-          
            {todo.isCompleted?
            <button disabled >edit</button>
            :
            <button
            onClick={editToggler}
-            >Edit</button> } 
+            >Edit</button>} 
           {/* <button >edit</button> */}
-          {editing? <TodoForm newTodo={updates} handleChange ={handleChange} addTodo={ () => {}} />: null}
+          {editing?<div>
+           <TodoForm newTodo={updates}  handleChange ={handleChange} buttonText={"EditTodo"} addTodo={editHandler} />
+           <button
+             onClick={(e) => setEditing(false)}>
+              Cancel
+            </button>
+           </div>
+          : null}
+
     </div>)
 }
 //edit function using props and the id?
