@@ -5,12 +5,19 @@ import postData from  '../data/posts.json'
 function Post(){
     const {slug} = useParams();
     const post = postData.find(post => post.slug === slug)
-    console.log(post)
 
 
-    return <div><h1>{post.title}</h1> {post.content}
+
+    return (
+        <div>
+    <h1>{post.title}</h1> 
+    
+    
+    
+    <div>{post.content}</div>
     </div>
-
+    
+    )
 }
 
 

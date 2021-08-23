@@ -1,0 +1,226 @@
+  
+* {
+  box-sizing: border-box;
+}
+
+body, #root {
+  background-color: hsl(261, 100%, 46%);
+  color: crimson;
+  font-family: Arial;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+h1 {
+  margin: 20px 0 0;
+}
+/*Boogeyman CSS*/
+.main-box {
+  background-color: black;
+  padding: 20px 30px;
+  position: relative;
+  margin: auto;
+  height: 350px;
+  width: 450px;
+}
+
+.Boogeyman-box{
+  stroke-width: 10px;
+  stroke-linecap: round;
+}
+
+.wrong-letters-box {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-family: monospace;
+}
+
+.wrong-letters-box p {
+  color:rgb(255, 0, 0);
+  margin: 0 0 5px;
+  
+}
+
+.wrong-letters-box span {
+  font-size: 24px;
+}
+
+.word {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.letter {
+  border-bottom: 3px solid #2980b9;
+  display: inline-flex;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3px;
+  height: 50px;
+  width: 20px;
+}
+
+.alerts-box {
+  background-color: rgba(0, 0, 0, 0.705);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.alerts {
+  background: hsl(253, 64%, 44%);
+  border-radius: 5px;
+  box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.alerts button {
+  cursor: pointer;
+  background-color: #fff;
+  color: #2980b9;
+  border: 0;
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+.popup button:active {
+  transform: scale(0.98);
+}
+
+.alerts button:focus {
+  outline: 0;
+}
+
+.notification-box {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px 10px 0 0;
+  padding: 15px 20px;
+  position: absolute;
+  bottom: -50px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.notification-box p {
+  margin: 0;
+}
+
+.notification-box.show {
+  transform: translateY(-50px);
+}
+
+/*Form CSS*/
+
+
+.form-container{  
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  color:#1fffe9
+}
+
+.switch-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items:baseline;
+}
+
+.link-colors {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+   background-color: black;
+   padding: 20px;
+   gap: 50px;
+
+}
+
+.switch-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items:baseline;
+}
+a{
+  color:red;
+}
+
+.form-button{
+  font-family: fantasy;
+  cursor: pointer;
+  background-color: rgb(240, 240, 240);
+  color: #230de6;
+  border: 0;
+  margin-left:10px;
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.form-button:active{
+  transform: scale(0.98);
+}
+
+.form-button:focus{
+  outline: 0;
+}
+
+/*mobile phone*/
+@media only screen and (min-width: 360px) and (max-width: 720px){
+  .main-box{
+    height: auto;
+    width: 325px;
+  }
+  .form-container {
+    width:320px;
+  }
+}
+
+/*tablet query*/
+  @media only screen and (min-width: 721px) and (max-width: 1024px){
+    .main-box{
+      height:auto;
+    }
+    .form-container{
+      width: auto;
+      font-size: 20px;
+    }
+    .link-colors{
+      font-size: 20px;
+    }
+  }
+
+  /*Laptop query*/
+  @media only screen and (min-width: 1025px) and (max-width:1366px ){
+.main-box{
+  height: auto;
+  width: auto;
+}
+.form-container{
+  width: auto;
+  font-size: 20px;
+}
+.link-colors{
+  font-size: 25px;
+}
+}
