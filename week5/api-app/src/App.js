@@ -52,17 +52,21 @@ const getDog = () => {
     getDog()
     
   }
+console.log(image)
 
   try {
     defaultImg = image.data[0].images.downsized.url
+  
     dogImage = image.data[1].images.downsized.url
+   
   }
+  
   catch {
 
   }
 
-  return (
 
+  return (
     
     
     <div>
@@ -70,12 +74,14 @@ const getDog = () => {
        <button onClick={onClick}>Button</button>
       <img src={defaultImg} alt='' />
       <img src={dogImage} alt=''/>
+    
 
   
   </div>
 
   
   );
+  
 }
 
 export default App;

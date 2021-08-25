@@ -6,7 +6,7 @@ import NoMatch from '../pages/NoMatch';
 
 function Body () {
     return (
-        <main className="container" style={{ border:"solid 6px mintcream"}}>
+        <main>
             <Switch>
         <Route exact = {true} path="/">
             <Home />
