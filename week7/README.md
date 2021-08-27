@@ -70,6 +70,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 ### Game info
-A form for new players.
-This is info about the mini game called Boogeyman.
-Basically solve the correct word before the Boogeyman appears. If you get the right word before he appears you win the game!.
+A deck and gallery generator for the Yugioh Card Game.
+In the input query, you type in what archetype you want and it returns those cards.
+You can click on the card to zoom and to add to your deck box. 
+If the card is on the Deck box, you can click Delete to delete the card or cards from the Deck box.
+Contact basically contains some general info and Disclaimers.

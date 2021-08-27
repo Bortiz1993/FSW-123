@@ -1,53 +1,71 @@
   
-
-
-body {
-	background:white;
-	color: green;
+html{
+		background-image: url("./images/wallpaper-the-sun-music-space-background-neon-80s-synth-qjntxedfg8wxdnnd.jpg");
+		  height: auto;
+		  background-repeat: no-repeat;
+		  background-size:cover;
+		   
+	  
 }
 
 .Main-Card-Box > .row {
 	overflow-x: auto;
 	flex-wrap: nowrap;
 }
+.cardRow{
+	border: solid 5px rgb(245, 13, 245);
+}
 
-.card-image-container {
+.card-image-box {
+	border: solid 3px black;
 	position: relative;
 	transition: transform 0.2s;
 }
 
-.card-image-container:hover {
+.card-image-box:hover {
 	cursor: pointer;
 	transform: scale(1.1);
 }
 
-.card-image-container:hover .overlay {
+.card-image-box:hover .overlay {
 	opacity: 2;
 }
 
 .overlay {
+	
 	position: absolute;
 	background: rgba(0, 0, 0, 0.8);
 	width: 100%;
 	transition: 0.7s ease;
 	opacity: 0;
-	bottom: 0;
+	bottom: 40px;
 	font-size: 20px;
 	padding: 20px;
 	text-align: center;
 }
 
+.card-list-box{
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: center;
+}
 
 
 h1 {
   margin: 20px 0 0;
+
 }
-/*Boogeyman CSS*/
 
-
-/*Form CSS*/
-
-
+.content-title{
+	color: cyan;
+	font-size: 20px;
+	font-family: monospace;
+}
+span{
+	font-family: monospace;
+	text-align: center;
+	color:aqua;
+}
 
 .link-colors {
     display: flex;
@@ -56,10 +74,41 @@ h1 {
    background-color: black;
    padding: 20px;
    gap: 50px;
+   font-family: monospace;
 
 }
+.home-title-box{
+	position: relative;
+    top: 70px;
+    border-radius: 5cm;
+    border-top: solid 0.2px;
+    border-bottom: solid 0.2px;
+	text-align: center;
+    color: cyan;
+    font-size: 30px;
+    font-family: monospace
+}
 
+.savedCardsBox{
+border: solid 5px whitesmoke;
+flex-wrap: wrap;
+}
 
 a{
-  color:red;
+	font-size: 20px;
+  color:aqua;
+}
+.search-input{
+	margin-bottom: 15px;
+}
+
+.contact-list{
+	position: relative;
+    top: 70px;
+    border-top: solid 1px cyan;
+    border-bottom: solid 1px cyan;
+	text-align: center;
+    color: cyan;
+    font-size: 25px;
+    font-family: monospace
 }
