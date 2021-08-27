@@ -60,8 +60,7 @@ function CardApp() {
     return (
 <div className='Main-Card-Box'>
 <div className='row'>
-<DeckBoxTitle title='Card Inventory'/>
-
+<DeckBoxTitle title='Card Inventory Keywords: Decode Talker, Stardust, Dark Magician, Elemental Hero, Odd-Eyes, etc. '/>
 </div>
 <div className='row'>
 

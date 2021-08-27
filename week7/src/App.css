@@ -38,7 +38,7 @@ html{
 	width: 100%;
 	transition: 0.7s ease;
 	opacity: 0;
-	bottom: 40px;
+	bottom: 65px;
 	font-size: 20px;
 	padding: 20px;
 	text-align: center;
@@ -112,3 +112,63 @@ a{
     font-size: 25px;
     font-family: monospace
 }
+
+/*Mobile Only*/
+@media only screen and (min-width: 360px) and (max-width: 720px){
+
+	html {
+		height: 75vh;
+		background-repeat: repeat;
+	}
+
+	.cardRow{
+		border: none;
+	}
+
+	.card-image-box {
+		border: solid 5px rgb(238, 11, 238)
+	}
+
+	.savedCardsBox{
+		border: none;
+	}
+
+	.card-list-box{
+		flex-wrap: none;
+		justify-content: none;
+	}
+}
+/*Tablet Only*/
+@media only screen and (min-width: 721px) and (max-width: 1024px){
+
+html {
+	background-repeat: unset;
+	background-size: unset;
+}
+.cardRow{
+	border: none;
+}
+
+.card-image-box{
+	border: solid 5px magenta;
+}
+
+.card-list-box {
+	flex-wrap: unset;
+	justify-content: unset;
+}
+.savedCardsBox{
+	border:none;
+	flex-wrap: wrap;
+}
+}
+
+/*Laptop*/
+@media only screen and (min-width: 1025px) and (max-width: 1440px){
+	html{
+		height: 90vh;
+		background-repeat: repeat;
+		background-size: cover;
+	}
+}
+
